@@ -63,6 +63,7 @@
             margin: 20px auto;
             max-width: 400px;
             font-size: 0.9em;
+            display: none;
         }
         .details ul {
             list-style-type: none;
@@ -90,8 +91,8 @@
             color: white;
         }
         .details img {
-            width: 20px;
-            height: 20px;
+            width: 20px; /* Reduced size */
+            height: 20px; /* Reduced size */
             vertical-align: middle;
         }
         .details span {
@@ -106,20 +107,34 @@
         <h1>Download SkySurf Browser</h1>
     </header>
     <main>
-        <p>Experience the web like never before with SkySurf Browser. Choose your download option below.</p>
-        <a href="#" class="download-button" onclick="toggleDetails()">Download Options</a>
-        <div class="details" id="details" style="display: none;">
+        <p>Experience the web like never before with SkySurf Browser. Download the latest version below.</p>
+        
+        <h2>Latest Version</h2>
+        <a href="SkySurf_v3_Portable.exe" class="download-button">SkySurf v0.3 Beta (Portable) Download</a>
+        <img src="windows-logo.png" alt="Windows Logo" style="width:20px; height:20px;"> 
+        <span>Windows (x64/x86)</span>
+        
+        <br><br>
+        <a href="#" class="download-button" onclick="toggleOlderVersions()">Older Versions</a>
+        
+        <div class="details" id="older-versions">
             <ul>
                 <li>
-                    <a href="SkySurf_v1_Portable.exe" class="download-button">SkySurf v0.1 (Portable) Download</a> 
-                    <img src="windows-logo.png" alt="Windows Logo"> 
+                    <a href="SkySurf_v2_Portable.exe" class="download-button">SkySurf v0.2 Beta (Portable) Download</a> 
+                    <img src="windows-logo.png" alt="Windows Logo" style="width:20px; height:20px;"> 
+                    <span>Windows (x64/x86)</span>
+                </li>
+                <li>
+                    <a href="SkySurf_v1_Portable.exe" class="download-button">SkySurf v0.1 Beta (Portable) Download</a> 
+                    <img src="windows-logo.png" alt="Windows Logo" style="width:20px; height:20px;"> 
                     <span>Windows (x64/x86)</span>
                 </li>
             </ul>
         </div>
+        
         <script>
-            function toggleDetails() {
-                const details = document.getElementById('details');
+            function toggleOlderVersions() {
+                const details = document.getElementById('older-versions');
                 details.style.display = details.style.display === 'none' || details.style.display === '' ? 'block' : 'none';
             }
 
