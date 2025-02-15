@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySurf Browser Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Favicon added -->
+    <style>
+        /* Inline CSS for styling */
+        body {
+            margin: 0;
+            font-family: 'Verdana', sans-serif;
+        }
+        .background {
+            background: linear-gradient(to bottom, #FFFFFF, #ADD8E6); /* Light gradient: white to light blue */
+            background-size: cover;
+            filter: blur(5px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        #logo {
+            width: 140px; /* Adjust the size as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        main {
+            text-align: center;
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            font-family: 'Courier New', monospace;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #0078D7;
+            color: #0078D7;
+            background: transparent;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin: 10px;
+            cursor: pointer;
+            font-family: 'Verdana', sans-serif;
+        }
+        .download-button:hover {
+            background-color: #0078D7;
+            color: white;
+        }
+        .details {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 400px;
+            font-size: 0.9em;
+            display: none;
+        }
+        .details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .details ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .details a {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 2px solid #0078D7;
+            border-radius: 4px;
+            color: #0078D7;
+            background: transparent;
+            font-family: 'Verdana', sans-serif;
+            cursor: pointer;
+        }
+        .details a:hover {
+            background: #0078D7;
+            color: white;
+        }
+        .details img {
+            width: 20px; /* Reduced size */
+            height: 20px; /* Reduced size */
+            vertical-align: middle;
+        }
+        .details span {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="background" id="background"></div>
+    <header>
+        <img src="logo.png" alt="SkySurf Logo" id="logo">
+        <h1>Download SkySurf Browser</h1>
+    </header>
+    <main>
+        <p>Experience the web like never before with SkySurf Browser. Download the latest version below.</p>
+        
+        <h2>Latest Version</h2>
+        <a href="SkySurf_v3_Portable.exe" class="download-button">SkySurf v0.3 Beta (Portable) Download</a>
+        <img src="windows-logo.png" alt="Windows Logo" style="width:20px; height:20px;"> 
+        <span>Windows (x64/x86)</span>
+        
+        <br><br>
+        <a href="#" class="download-button" onclick="toggleOlderVersions()">Older Versions</a>
+        
+        <div class="details" id="older-versions">
+            <ul>
+                <li>
+                    <a href="SkySurf_v2_Portable.exe" class="download-button">SkySurf v0.2 Beta (Portable) Download</a> 
+                    <img src="windows-logo.png" alt="Windows Logo" style="width:20px; height:20px;"> 
+                    <span>Windows (x64/x86)</span>
+                </li>
+                <li>
+                    <a href="SkySurf_v1_Portable.exe" class="download-button">SkySurf v0.1 Beta (Portable) Download</a> 
+                    <img src="windows-logo.png" alt="Windows Logo" style="width:20px; height:20px;"> 
+                    <span>Windows (x64/x86)</span>
+                </li>
+            </ul>
+        </div>
+        
+        <script>
+            function toggleOlderVersions() {
+                const details = document.getElementById('older-versions');
+                details.style.display = details.style.display === 'none' || details.style.display === '' ? 'block' : 'none';
+            }
+
+            // Check if coolbackground.png exists
+            const backgroundDiv = document.getElementById('background');
+            const img = new Image();
+            img.src = 'coolbackground.png';
+            img.onload = function() {
+                backgroundDiv.style.backgroundImage = "url('coolbackground.png')";
+            };
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 SkySurf. All rights reserved.</p>
+    </footer>
+</body>
+</html>
